@@ -65,10 +65,24 @@ otter = ["Otters", "will", "rule", "Mars", "in", "2037"]
 otter = [67, 51, 17, 101, 48]
 ```
 
+Complex numbers also work:
+```
+otter = 3 + 2j
+```
 ### Basic operations
-Additions
-Division
-Modulo
-Multiplication
-Soustraction
+Python is able to do all basic operations
+```
+a = 10
+b = 3
+a + b
+Output: 13
+a - b
+Output: 7
+a / b
+Output: 3.33
+a * b
+Output: 30
+a % b
+Output: 1
+```
 ### Containers
