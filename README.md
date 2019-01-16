@@ -218,7 +218,7 @@ def turtle(p):
 turtle(3) # the return value should be 9
 ```
 
-If it is a one time function that could be writen in one line you can define a `lambda` function:
+If it is a one time function that could be writen in one line you can define a `lambda` function instead:
 ```python
 turtle = lambda p: p * 3
 turtle(3) # the return value is 9
@@ -231,3 +231,33 @@ otter = 4
 turtle = lambda p: p * otter
 turtle(3) # the return value is 12
 ```
+
+### Modules
+At some point, it is interesting to keep separate files for different type of functions.
+The `import` keyword enable python to load a python file.
+
+How to call the cosinus function from the `math` module:
+```python
+import math
+math.cos(3.14)
+```
+
+Importing a module and renaming it.
+```python
+import math as otter
+otter.cos(3.14)
+```
+
+Import a specific function from a module.
+```python
+from math import cos
+cos(3.14)
+```
+
+Import a specific function and renaming it.
+```python
+from math import cos as otter
+otter(3.14)
+```
+
+Note that the import keyword will make python look into all the paths of your environment variable `PYTHONPATH`.
