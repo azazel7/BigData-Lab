@@ -112,7 +112,7 @@ Output: 1
 ```
 ### Containers
 #### Tuples
-A tuple is an immutable serie of variables.
+A tuple is an immutable series of variables.
 ```python
 parrot = (1, True, "otter")
 print(parrot[1])
@@ -128,25 +128,25 @@ parrot[2] = parrot[2] + "platypus" # Won't work because your are reassigning the
 Note: RDDs in Spark usually work with tuples.
 
 #### Lists
-A list is a mutable serie of variables.
+A list is a mutable series of variables.
 ```python
-turtle = ["whale", 1, True] #Instanciate a new list with three values.
+turtle = ["whale", 1, True] #Instantiate a new list with three values.
 ```
 
-You can re-assigne the values and modify the list.
+You can re-assign the values and modify the list.
 ```python
-turtle[0] = "fish" # assignes the string "fish" to the first element of the list
+turtle[0] = "fish" # Assigns the string "fish" to the first element of the list.
 print(turtle)
 ["fish", 1, True]
 
-turtle.append(72) # will append the value 72
+turtle.append(72) # Will append the value 72 to the list.
 print(turtle)
 ["fish", 1, True, 72]
 ```
 
 #### Dictionaries
 A dictionary is a mutable collection of key-value pairs. The idea is to access
-values with indexes made of object rather than integers.
+values with indexes made of objects rather than just integers.
 ```python
 otter = {"names" : ["Mike", "Ali"],
 		 4 : True, 
@@ -163,7 +163,7 @@ otter["animals"] # output 78
 
 #### If/Elif/Then statements
 
-The python code for a basic conditionnal statement.
+The python code for a basic conditional statement.
 ```python
 otter = 10
 if otter % 2 == 0:
@@ -174,7 +174,7 @@ else:
 	print("Nothing much")
 ```
 
-Now an equivalent in java. Note the importance of the indentation in python.
+Now, an equivalent in java. Note the importance of the indentation in python.
 ```java
 int otter = 10
 if(otter%2 == 0){
@@ -231,7 +231,7 @@ whale = {i*10:i for i in range(10)}
 ```
 
 #### Functions
-Function is a good way of spliting your program in re-usable piece of code.
+Functions are a good way of splitting your program into re-usable pieces of code.
 
 ```python
 def turtle(p):
@@ -240,13 +240,13 @@ def turtle(p):
 turtle(3) # the return value should be 9
 ```
 
-If it is a one time function that could be writen in one line you can define a `lambda` function instead:
+If it is a one time function that could be written in one line you can define a `lambda` function instead:
 ```python
 turtle = lambda p: p * 3
 turtle(3) # the return value is 9
 ```
 
-Note that either your are creating a lambda function or a normal function, you are able to access variables outside the scope of the lambda.
+Note that if you create a lambda function, you are able to access variables outside the scope of the lambda.
 
 ```python
 otter = 4
@@ -285,12 +285,12 @@ otter(3.14)
 Note that the import keyword will make python look into all the paths of your environment variable `PYTHONPATH`.
 
 ## Pytest
-Pytest is a test framework that make it easy to write simple unit test.
+Pytest is a test framework that makes it easy to write simple unit test.
 
 Here is a quick example. Let us assume the file `test_sample.py` contains the
 following lines:
 ```python
-def inc(x):
+def incremente(x):
     return x + 1
 
 def test_answer():
