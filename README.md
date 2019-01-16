@@ -1,14 +1,32 @@
 # Big Data Introduction
 
 ## Cheat Sheets
-- [Git sheet](https://rogerdudler.github.io/git-guide)
 - [Git sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 - [Pyspark sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf)
 - [Python sheet](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf)
 - [Another Python sheet](https://programmingwithmosh.com/python/python-3-cheat-sheet/)
 
 ## Git Introduction
-[Git Guide](https://rogerdudler.github.io/git-guide)
+- [Git Guide](https://rogerdudler.github.io/git-guide)
+
+Git is a versionning software like SVN or Mercurial.
+There is multiple advantages to use git:
+- Decentralized
+- Free and Open Source
+- Efficient
+- GitHub website
+
+### Workflow
+#### In a perfect world
+- `git add <filename>`
+- `git commit`
+- `git commit --amend`
+- `git push`
+#### Bug Hunting
+`git log`
+![alt text](figure/log.png)
+`git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8`
+### Pull Request
 
 ### Create GitHub account
 You can create your GitHub account [here](https://github.com/join).
@@ -17,15 +35,6 @@ The repository for this lab is located [here](https://github.com/azazel7/BigData
 #### Fork the repository
 #### Clone the repository
 `git clone`
-### Workflow
-#### In a perfect world
-`git add <filename>`
-`git commit`
-`git commit --amend`
-`git push`
-#### Bug Hunting
-`git checkout`
-### Pull Request
 
 ## Python Introduction
 (Python CheatSheet)[]
