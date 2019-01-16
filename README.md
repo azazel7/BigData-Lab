@@ -73,7 +73,7 @@ print('Hello world')
 ```
 ### Variables
 Python is dynamically typed.
-In this first example, `otter` is set as an integer and its value equal 3.
+In this first example, `otter` is set as an integer and its value equal to 3.
 ```python
 otter = 3
 ```
