@@ -1,4 +1,9 @@
 # Big Data Introduction
+The goal of this presentation is set up all the tools you will need in the class:
+- An overview of Git
+- GitHub Account
+- An overview of Python
+- An overview of Pytest
 
 ## Cheat Sheets
 - [Git sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
@@ -18,18 +23,21 @@ There is multiple advantages to use git:
 
 ### Workflow
 #### In a perfect world
-- `git add <filename>`
-- `git commit`
-- `git commit --amend`
-- `git push`
+- `git add <filename>` : Add your modification to git.
+- `git commit` : Validate your modification.
+- `git commit --amend` : Fix a local commit.
+- `git push origin master` : Push your local commit to a distant repository.
+- `git pull origin master` : Pull and merge the last commit from a distant repository.
+
 #### Bug Hunting
-`git log`
+- `git log` : List all the commits.
 ![alt text](figures/git-log.png)
-`git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8`
-### Pull Request
+
+- `git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8` : Rollback to the commit chosen.
+- `git checkout HEAD~1` : Rollback to the previous commit.
 
 ### Create GitHub account
-You can create your GitHub account [here](https://github.com/join).
+You can create a new GitHub account [here](https://github.com/join).
 ### Get the repository
 The repository for this lab is located [here](https://github.com/azazel7/BigData-Lab1)
 
@@ -37,10 +45,11 @@ The repository for this lab is located [here](https://github.com/azazel7/BigData
 Forking a repository create a copy of the original repository on your GitHub account. Which enables you to have a full control over the repository. 
 ![alt text](figures/fork.png)
 #### Clone the repository
-`git clone`
+Cloning a git repository will download the entire history of the repository on your computer.
+
+- `git clone <url>`
 
 ## Python Introduction
-(Python CheatSheet)[]
 ### Required
 - Python 3.5
 
@@ -273,3 +282,24 @@ otter(3.14)
 ```
 
 Note that the import keyword will make python look into all the paths of your environment variable `PYTHONPATH`.
+
+## Pytest
+Pytest is a test framework that make it easy to write simple unit test.
+
+Here is a quick example. Let us assume the file `test_sample.py` contains the
+following lines:
+```python
+def inc(x):
+    return x + 1
+
+def test_answer():
+	assert inc(3) == 5
+```
+
+To run the tests, just run one of the following commands:
+```python
+pytest
+pytest test_sample.py
+```
+
+The `pytest` command check for files starting with the `test_` and will run function when their names also start with `test_`.
