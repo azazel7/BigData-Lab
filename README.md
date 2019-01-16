@@ -1,5 +1,5 @@
 # Big Data Introduction
-The goal of this presentation is set up all the tools you will need in the class:
+The goal of this presentation is to introduce tools you will need in the class:
 - An overview of Git
 - GitHub Account
 - An overview of Python
@@ -14,8 +14,8 @@ The goal of this presentation is set up all the tools you will need in the class
 ## Git Introduction
 - [Git Guide](https://rogerdudler.github.io/git-guide)
 
-Git is a versionning software like SVN or Mercurial.
-There is multiple advantages to use git:
+Git is a versioning software like SVN or Mercurial.
+There are multiple advantages to use git:
 - Decentralized
 - Free and Open Source
 - Efficient
@@ -33,7 +33,7 @@ There is multiple advantages to use git:
 - `git log` : List all the commits.
 ![alt text](figures/git-log.png)
 
-- `git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8` : Rollback to the commit chosen.
+- `git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8` : Rollback to the chosen commit.
 - `git checkout HEAD~1` : Rollback to the previous commit.
 
 ### Create GitHub account
@@ -42,7 +42,8 @@ You can create a new GitHub account [here](https://github.com/join).
 The repository for this lab is located [here](https://github.com/azazel7/BigData-Lab1)
 
 #### Fork the repository
-Forking a repository create a copy of the original repository on your GitHub account. Which enables you to have a full control over the repository. 
+Forking a repository create a copy of the original repository on your GitHub
+account. Which enables you to have full control over the repository. 
 ![alt text](figures/fork.png)
 #### Clone the repository
 Cloning a git repository will download the entire history of the repository on your computer.
