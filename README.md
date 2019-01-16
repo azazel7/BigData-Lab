@@ -133,12 +133,75 @@ otter = {"names" : ["Mike", "Ali"],
 You can access the value of each index just like that:
 ```python
 otter["names"]   # output ["Mike", "Ali"]
-otter[4] 	     # output True
+otter[4]     # output True
 otter["animals"] # output 78
 ```
 
 ### Control Statements
+
 #### If/Elif/Then statements
+
+The python code for a basic conditionnal statement.
+```python
+otter = 10
+if otter % 2 == 0:
+	print(otter)
+elif otter == 17:
+	print("Otter equals 17")
+else:
+	print("Nothing much")
+```
+
+Now an equivalent in java. Note the importance of the indentation.
+```java
+int otter = 10
+if(otter%2 == 0){
+	System.out.printf("%d", otter);
+}
+else if(otter == 17){
+System.out.printf("Otter equals 17");
+}
+else{
+		System.out.printf("Nothing much");
+}
+```
 #### While statements
+```python
+otter = 0
+while otter % 10 != 9:
+	print(otter)
+	otter = otter + 1
+```
+```java
+int otter = 10
+while(otter % 10 != 9){
+	System.out.printf("%d", otter);
+	otter = otter + 1
+}
+```
 #### For statements
+The idea of the `for` statement is to browse through a list.
+```python
+for i in range(10):
+	print(i)
+```
+
+The java equivalent is shown below:
+```java
+for(int i = 0; i < 10; i = i+1){
+	System.out.printf("%d", i);
+}
+```
+
+Another python example:
+```python
+otter = ["platypus", 78, {}, "42"]
+for i in otter:
+	print(i)
+```
 #### Containers in one line
+To be quicker, it may be interesting to build lists and dictionaries from a for loop.
+```python
+otter = [i*10 for i in range(10)]
+whale = {i*10:i for i in range(10)}
+```
