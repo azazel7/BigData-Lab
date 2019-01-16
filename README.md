@@ -152,7 +152,7 @@ else:
 	print("Nothing much")
 ```
 
-Now an equivalent in java. Note the importance of the indentation.
+Now an equivalent in java. Note the importance of the indentation in python.
 ```java
 int otter = 10
 if(otter%2 == 0){
@@ -172,6 +172,8 @@ while otter % 10 != 9:
 	print(otter)
 	otter = otter + 1
 ```
+
+The java equivalent:
 ```java
 int otter = 10
 while(otter % 10 != 9){
@@ -204,4 +206,28 @@ To be quicker, it may be interesting to build lists and dictionaries from a for 
 ```python
 otter = [i*10 for i in range(10)]
 whale = {i*10:i for i in range(10)}
+```
+
+#### Functions
+Function is a good way of spliting your program in re-usable piece of code.
+
+```python
+def turtle(p):
+	return p * 3
+
+turtle(3) # the return value should be 9
+```
+
+If it is a one time function that could be writen in one line you can define a `lambda` function:
+```python
+turtle = lambda p: p * 3
+turtle(3) # the return value is 9
+```
+
+Note that either your are creating a lambda function or a normal function, you are able to access variables outside the scope of the lambda.
+
+```python
+otter = 4
+turtle = lambda p: p * otter
+turtle(3) # the return value is 12
 ```
