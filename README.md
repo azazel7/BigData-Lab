@@ -24,7 +24,7 @@ There is multiple advantages to use git:
 - `git push`
 #### Bug Hunting
 `git log`
-![alt text](figure/log.png)
+![alt text](figures/git-log.png)
 `git checkout b793f5c257bc0b0a4d6728543cc36eaa2d6091c8`
 ### Pull Request
 
@@ -32,7 +32,10 @@ There is multiple advantages to use git:
 You can create your GitHub account [here](https://github.com/join).
 ### Get the repository
 The repository for this lab is located [here](https://github.com/azazel7/BigData-Lab1)
+
 #### Fork the repository
+Forking a repository create a copy of the original repository on your GitHub account. Which enables you to have a full control over the repository. 
+![alt text](figures/fork.png)
 #### Clone the repository
 `git clone`
 
