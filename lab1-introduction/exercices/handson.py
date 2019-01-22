@@ -3,10 +3,8 @@
 # Given a list of numbers, return the average of the list.
 # If numbers equal [10, 10, 15, 7], the return value should be 10.5
 def avg(numbers):
-  accumulator = 0
-  for i in numbers:
-      accumulator = accumulator + i
-  return accumulator / len(numbers)
+  # +++your code here+++
+  return
 
 # B. both_ends
 # Given a string s, return a string made of the first 2
@@ -14,6 +12,7 @@ def avg(numbers):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
+  # +++your code here+++
   return
 
 # D. MixUp
