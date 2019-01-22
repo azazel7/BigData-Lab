@@ -105,7 +105,12 @@ df = df.select("Park Name")
 ```python
 df = df.where("x = 2")
 ```
-- groupBy
+- **groupBy**(): Group rows together using aggregate function such as min, max or avg.
+```python
+df.groupBy("x").count()
+df.groupBy("x").sum()
+df.groupBy("x").mean()
+```
 - **orderBy**("column1", "column2", ...): Order the dataframe with one or more column.
 ```python
 from pyspark.sql.functions import desc
