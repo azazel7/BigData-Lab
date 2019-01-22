@@ -88,16 +88,40 @@ Dataframes are structured like tables in SQL or like Excel spreadsheet.
 | 2    | Otter Park  | 63 | 21 |
 | 3    | Canada Park | 2  | 3  |
 
-### Operator
+To load a csv file into a dataframe:
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession._create_shell_session()
+df = spark.read.csv(filename, header=True, mode="DROPMALFORMED")
+```
+### Operators
+
+- **show**() : Display the first lines of a dataframe.
 - **select**(column name, another column name) : Return a dataframe with only the column selected.
-- where
+```python
+df = df.select("Park Name")
+```
+- **where**("action") : Remove lines that does not fit the action.
+```python
+df = df.where("x = 2")
+```
 - groupBy
-- orderBy
-	from pyspark.sql.functions import desc
-    global_info = global_info.orderBy(desc("size"), desc("interest")).limit(n).select("antecedent", "consequent", "confidence", "items", "freq", "interest")
-- limits
-- show
-- createDataFrame
-    plants_rdd = parts.map(lambda p: Row(id=int(p[1]), plant=p[0][0], items=p[0][1:]))
-    plants_df = spark.createDataFrame(plants_rdd)
-- join
+- **orderBy**("column1", "column2", ...): Order the dataframe with one or more column.
+```python
+from pyspark.sql.functions import desc
+df.orderBy(desc("Park Name"))
+```
+- **limit**(number) : Drop all rows after the `number` th row.
+```python
+df.limit(7)
+```
+- **createDataFrame**(rdd) : Create a dataframe from an RDD.
+```python
+from pyspark.sql import Row
+trees_rdd = parts.map(lambda p: Row(id=int(p[1]), park_name=p[1], x=p[2], y=p[3]))
+trees_df = spark.createDataFrame(trees_rdd)
+```
+- **join**() : Combine dataframe based on common column.
+```python
+df = df1.join(df2, df2.park_name == df1.park_name)
+```
