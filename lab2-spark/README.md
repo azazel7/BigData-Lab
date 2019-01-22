@@ -130,3 +130,39 @@ trees_df = spark.createDataFrame(trees_rdd)
 ```python
 df = df1.join(df2, df2.park_name == df1.park_name)
 ```
+
+## Assignment 
+### What to do
+The goal of the assignment is to code the empty functions in `answers/answer.py`.
+
+Once you have writen the function you can run the corresponding test as follow:
+```
+pytest tests/test_count.py 						#Run the test functions in test_count.py
+pytest tests/test_count.py tests/test_park.py	#Run the test functions in test_count.py and test_park.py
+pytest tests/test_count*						#Run the test functions in test_count.py, test_count_rdd.py and test_count_df.py
+pytest tests									#Run all tests
+```
+### CSV
+The CSV format is a format where the data is separated by commas and new lines.
+```
+name,age,address
+Martin,22,"40 Oakland street, Montréal"
+Tristan,37,"1024 Ford street, Kuujjuaq"
+Ali,26,"23 St-Catherine street, Québec"
+```
+### Dataset
+The dataset for assignment 1 is a CSV file that contains one injection per line.
+A tree is treated once a year.
+
+- **Nom_arrond** :  Neighborhood name.
+- **Invent** : Type of tree injected (H = out of street, R = in street)
+- **No_Civiq** : Number of the building in front of the tree.
+- **Rue** : Street name if the tree is in the street (see **Invent**).
+- **Rue_De** : Street name of the street that delimit the area where the tree is planted.
+- **Rue_a** : Street name of the street that delimit the area where the tree is planted. (Combined with **Rue_De**.)
+- **Nom_parc** : Name of the park in which the tree is planted (see **Invent**).
+- **Sigle** : The first two letter of the latin name of the tree.
+- **Injections** : Year of the injection.
+- **x** : The x coordinate based on the Mercator projection of Québec.
+- **y** : The y coordinate based on the Mercator projection of Québec.
+- **longitude** and **latitude**
