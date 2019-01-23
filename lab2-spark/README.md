@@ -6,7 +6,7 @@ A more complete documentation is available [here](http://spark.apache.org/docs/l
 
 ```python
 filename = "trees2016.csv"
-lines = spark.sparkContext.textFile(filename, minPartitions=8)
+lines = spark.sparkContext.textFile(filename)
 data = [i for i in range(10)]
 rdd = spark.sparkContext.parallelize(data)
 ```
