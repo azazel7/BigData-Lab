@@ -1,4 +1,6 @@
 # scikit-learn
+The goal of this laboratory is to show you that using classifier in python is straightforward.
+
 ## Install scikit-learn
 To install scikit-learn you can use `pip`. Note that Numpy and SciPy are dependencies of scikit-learn.
 ```
