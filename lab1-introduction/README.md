@@ -6,7 +6,7 @@ The goal of this presentation is to introduce tools you will need in the class:
 - An overview of Pytest
 
 ## Cheat Sheets
-- [Git sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+- [Git sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 - [Pyspark sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf)
 - [Python sheet](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf)
 - [Another Python sheet](https://programmingwithmosh.com/python/python-3-cheat-sheet/)
