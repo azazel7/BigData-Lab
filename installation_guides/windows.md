@@ -65,7 +65,9 @@ have just created.
 Note: If you don't know how to set environment variables, see step 2.1 of installing Python.
 ![Setting Hadoop Home](figures/setting-hadoop-home.JPG)
 5. Restart your Command Prompt, activate your virtual environment and execute the command `pyspark` to start the PySpark interpreter.
+
 ![PySpark interpreter](figures/pyspark-interpreter.JPG)
+
 6. Run the following commands:
 
 ```
