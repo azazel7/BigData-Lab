@@ -17,7 +17,7 @@ installed. Please submit a PR to update this document for alternate versions of 
     1. Start menu
     2. Control Panel
     3. User Accounts
-    4. Change my environment variables (last option on the lefthand-side menu)
+    4. Change my environment variables (last option on the lefthand-side menu or search "Edit environment variables")
     5. Click on `New...` under `User variables for <your username>
     6. Set variable name to `PYTHONHOME` and variable value to the path of your newly extracted 
        Python directory (e.g. C:\Users\umroot\AppData\Local\Programs\Python\Python35)
@@ -25,7 +25,7 @@ installed. Please submit a PR to update this document for alternate versions of 
     8. Select `PATH` under `User variables for <your username>` and click `Edit...`. If it doesn't exist, create it by clicking `New...`!
     9. Add the previously created PYTHONHOME variable to your PATH along with its Scripts folder
        (e.g. `%PYTHONHOME%;%PYTHONHOME%\Scripts`). Note: Don't erase the other values
-       in the PATH variable, just append to the list using a semi-colon before entering the Python executable path.
+       in the PATH variable, just **prepend** to the list using a semi-colon before entering the Python executable path.
     10. Press OK on both screens to finalize the changes.
 4. You should now be able to open your Command Prompt and enter `python --version` to obtain the
    installed Python version, as well as, `pip --version` to obtain the installed version of the Python
@@ -55,9 +55,17 @@ You have just installed PySpark, however, there will still be bugs if you try to
 2. Download winutils.exe from [here](http://public-repo-1.hortonworks.com/hdp-win-alpha/winutils.exe)
 3. Create a winutils folder to copy the executable to it (e.g. `C:\Users\umroot\AppData\Local\Programs\Hadoop\bin\winutils.exe`)
 4. Create a new environment variable and name it `HADOOP_HOME`. Set the variable value to the path of the `Hadoop` directory.
-Note: If you done know how to set environment variables, see step 2.1 of installing Python.
+Note: If you don't know how to set environment variables, see step 2.1 of installing Python.
 5. Restart your Command Prompt, activate your virtual environment and execute the command `pyspark` to start the pyspark interpreter.
-6. Congrats! You have successfully installed PySpark.
+6. Run the following commands:
+
+```
+data = [i for i in range(10)]
+rdd = spark.sparkContext.parallelize(data)
+rdd.filter(lambda x: x%2 == 0).collect()
+```
+7. The output of the last command should be *[0, 2, 4, 6, 8]*
+8. Congrats! You have successfully installed PySpark.
 
 
 ### Installing Dask inside your virtual environment.
