@@ -93,6 +93,7 @@ We will be using Pytest to evaluate your assignment solutions.
 
 1. With your venv activated, well will execute the command `pip install pytest` in the Command Prompt.
 2. Execute the command `pytest --version` in your Command Prompt to ensure pytest has successfully been installed.
+
 ![Pytest version](figures/pytestversion.JPG)
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is always activated to
