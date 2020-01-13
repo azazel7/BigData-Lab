@@ -15,6 +15,8 @@ installed on your system. After typing `python3` into your terminal click the `t
 - To check if pip is installed, execute the command `pip3 --version`
 - To check if Java is installed, execute the command `java -version`
 
+![Java version](figure/macos/java-version)
+
 
 MacPorts is a package manager for Macs. Another popular Mac-based package
 manager is ![Homebrew](https://brew.sh/). Either work for the purposes of this
@@ -34,6 +36,9 @@ This can be achieved using the command `source ~/<configuration_file>
 e.g. `source ~/.profile`.
 If that does not work, set your PATH environment variable as
 described ![here](https://guide.macports.org/chunked/installing.shell.html).
+
+![Port man page](figures/macos/port-manual)
+
 4. Congrats! You have just installed MacPorts.
 
 ### Installing Python 3.5 (3.5.9)
@@ -43,7 +48,13 @@ version of Python 3.5 available for the respective OS. All versions of Python 3.
 assignments. You should always double check your run on Travis before the assignment deadline, however.
 
 1. Execute the command `sudo port install python35` in your Terminal.
+
+![Port install Python](figures/macos/python-install)
+
 2. Check if Python 3.5 has been installed by executing the following command: `python3.5 --version`.
+
+![Python version](figures/macos/python-version)
+
 3. Congrats! You have successfully installed Python3.5.
 
 
@@ -52,7 +63,13 @@ assignments. You should always double check your run on Travis before the assign
 Pip is Python's package manager. We will use it to install PySpark, Dask and Pytest.
 
 1. Execute the command `sudo port install py35-pip`.
+
+![Port install Pip](figures/macos/pip-install)
+
 2. Check if Pip has been successfully installed by executing the command `pip-3.5 --version`.
+
+![Pip version](figures/macos/pip-version)
+
 3. Congrats! You have successfully installed Pip.
 
 ### Creating a virtual environment
@@ -63,6 +80,8 @@ in Python versions 3.5+, and therefore, does not need to be installed.
 1. Create a virtual environment by executing the command: `python3.5 -m venv <your venv directory path>`
 2. Activate your virtual environment by executing the command: `source <venv directory path>/bin/activate`
 
+![Activating a venv](figures/macos/venv-activate)
+
 ### Installing Java JDK 8
 
 As PySpark relies on the JVM, it is necessary to have Java installed on your machine. Spark's latest release
@@ -71,6 +90,8 @@ As PySpark relies on the JVM, it is necessary to have Java installed on your mac
 1. Execute the command `sudo port install openjdk8`
 2. Check that Java has been successfully installed by executing the command `java -version`
 
+![Java version](figures/macos/java-version)
+
 ### Installing PySpark inside you virtual environment
 
 PySpark is the Python API in Apache Spark. It is required to complete the course assignments.
@@ -78,7 +99,13 @@ In this section, we will install Apache Spark into the virtual environment that 
 have just created.
 
 1. With your venv activated, we will execute the command `pip install pyspark`
+
+![Pip install PySpark](figures/macos/pyspark-install)
+
 2. Execute the command `pyspark` to start the PySpark interpreter.
+
+![PySpark interpreter](figures/macos/pyspark-interpreter)
+
 3. Run the following commands
 
 ```
@@ -107,6 +134,8 @@ We will be using Pytest to evaluate your assignment solutions.
 
 1. With your venv activated, we will execute the command `pip install pytest` in the terminal.
 2. Execute the command `pytest --version` in you terminal to ensure Pytest has successfully been installed.
+
+![Pytest version][figures/macos/pytest-version]
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is activated when running
 examples to access the installed packages, otherwise they will be missing.

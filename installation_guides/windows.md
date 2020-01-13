@@ -13,14 +13,14 @@ installed. Please submit a PR to update this document for alternate versions of 
    If Python is installed and you have a version of Python3+, you may skip the following steps and move on to the next section.
 1. Download the Python 3.5.4 web-based installer from [here](https://www.python.org/downloads/release/python-354/)
 2. Execute installer and make sure to select "Add Python 3.5 to PATH" and click `Install Now`
-![Python installer](figures/web-based-installer.JPG)
+![Python installer](figures/windows/web-based-installer.JPG)
   - If you have accidentally omitted to add Python to your PATH:
     1. Start menu
     2. Control Panel
     3. User Accounts
     4. Change my environment variables (last option on the lefthand-side menu or search "Edit environment variables")
     5. Click on `New...` under `User variables for <your username>`
-    ![Environment variables window](figures/environmentvars.JPG)
+    ![Environment variables window](figures/windows/environmentvars.JPG)
     6. Set variable name to `PYTHONHOME` and variable value to the path of your newly extracted 
        Python directory (e.g. `C:\Users\umroot\AppData\Local\Programs\Python\Python35`)
     7. Press `Ok`
@@ -32,7 +32,7 @@ installed. Please submit a PR to update this document for alternate versions of 
 4. You should now be able to open your Command Prompt and enter `python --version` to obtain the
    installed Python version, as well as, `pip --version` to obtain the installed version of the Python
    package manager.
-   ![Python / Pip version Command Prompt](figures/pythonpip-installed.JPG)
+   ![Python / Pip version Command Prompt](figures/windows/pythonpip-installed.JPG)
 5. Congrats! You have successfully installed Python 3.5.4 on your Windows machine.
 
 
@@ -46,7 +46,7 @@ It is a preinstalled module in Python versions 3.5+, and therefore, does not nee
 2. Activate your virtualenv by executing the command: `<venv directory path>/Scripts/activate`
 (e.g. `soen499venv\Scripts\activate`)
 
-![Virtual environment created and activated](figures/venvactivated.JPG)
+![Virtual environment created and activated](figures/windows/venvactivated.JPG)
 
 
 ### Installing PySpark inside your virtual environment
@@ -56,17 +56,17 @@ In this section, we will install Apache Spark into the virtual environment that 
 have just created.
 
 1. With your venv activated, we will execute the command `pip install pyspark`.
-![Installing PySpark](figures/installing-pyspark.JPG)
+![Installing PySpark](figures/windows/installing-pyspark.JPG)
 - You have just installed PySpark, however, there will still be bugs if you try to access the PySpark interpreter.
-![PySpark winutils bugs](figures/pyspark-bugs.JPG)
+![PySpark winutils bugs](figures/windows/pyspark-bugs.JPG)
 2. Download winutils.exe from [here](http://public-repo-1.hortonworks.com/hdp-win-alpha/winutils.exe)
 3. Create a winutils folder to copy the executable to it (e.g. `C:\Users\umroot\AppData\Local\Programs\Hadoop\bin\winutils.exe`)
 4. Create a new environment variable and name it `HADOOP_HOME`. Set the variable value to the path of the `Hadoop` directory.
 Note: If you don't know how to set environment variables, see step 2.1 of installing Python.
-![Setting Hadoop Home](figures/setting-hadoop-home.JPG)
+![Setting Hadoop Home](figures/windows/setting-hadoop-home.JPG)
 5. Restart your Command Prompt, activate your virtual environment and execute the command `pyspark` to start the PySpark interpreter.
 
-![PySpark interpreter](figures/pyspark-interpreter.JPG)
+![PySpark interpreter](figures/windows/pyspark-interpreter.JPG)
 
 6. Run the following commands:
 
@@ -96,7 +96,7 @@ We will be using Pytest to evaluate your assignment solutions.
 1. With your venv activated, well will execute the command `pip install pytest` in the Command Prompt.
 2. Execute the command `pytest --version` in your Command Prompt to ensure pytest has successfully been installed.
 
-![Pytest version](figures/pytestversion.JPG)
+![Pytest version](figures/windows/pytestversion.JPG)
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is always activated to
 access the installed resources, otherwise you will find that they are missing.
