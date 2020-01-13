@@ -65,7 +65,9 @@ have just created.
 Note: If you don't know how to set environment variables, see step 2.1 of installing Python.
 ![Setting Hadoop Home](figures/setting-hadoop-home.JPG)
 5. Restart your Command Prompt, activate your virtual environment and execute the command `pyspark` to start the PySpark interpreter.
+
 ![PySpark interpreter](figures/pyspark-interpreter.JPG)
+
 6. Run the following commands:
 
 ```
@@ -93,6 +95,7 @@ We will be using Pytest to evaluate your assignment solutions.
 
 1. With your venv activated, well will execute the command `pip install pytest` in the Command Prompt.
 2. Execute the command `pytest --version` in your Command Prompt to ensure pytest has successfully been installed.
+
 ![Pytest version](figures/pytestversion.JPG)
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is always activated to
