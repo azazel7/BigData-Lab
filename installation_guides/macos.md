@@ -135,7 +135,7 @@ We will be using Pytest to evaluate your assignment solutions.
 1. With your venv activated, we will execute the command `pip install pytest` in the terminal.
 2. Execute the command `pytest --version` in you terminal to ensure Pytest has successfully been installed.
 
-![Pytest version][figures/macos/pytest-version.png]
+![Pytest version](figures/macos/pytest-version.png)
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is activated when running
 examples to access the installed packages, otherwise they will be missing.
