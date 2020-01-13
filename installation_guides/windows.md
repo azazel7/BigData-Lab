@@ -7,11 +7,11 @@ Note: these instructions were tested on Windows 7 Enterprise with Java 1.8.0_211
 installed. Please submit a PR to update this document for alternate versions of Windows.
 
 
-### Installing Python version 3.5.4
+### Installing Python version 3.5.1
 
 0. Check if Python is installed on your computer by opening a Command Prompt and typing `python --version`.
    If Python is installed and you have a version of Python3+, you may skip the following steps and move on to the next section.
-1. Download the Python 3.5.4 web-based installer from [here](https://www.python.org/downloads/release/python-354/)
+1. Download the Python 3.5.1 web-based installer from [here](https://www.python.org/downloads/release/python-351/)
 2. Execute installer and make sure to select "Add Python 3.5 to PATH"
   2.1. If you have accidentally omitted to add Python to your PATH:
     1. Start menu
@@ -30,7 +30,7 @@ installed. Please submit a PR to update this document for alternate versions of 
 4. You should now be able to open your Command Prompt and enter `python --version` to obtain the
    installed Python version, as well as, `pip --version` to obtain the installed version of the Python
    package manager.
-5. Congrats! You have successfully installed Python 3.5.4 on your Windows machine.
+5. Congrats! You have successfully installed Python 3.5.1 on your Windows machine.
 
 
 ### Creating a virtual environment
