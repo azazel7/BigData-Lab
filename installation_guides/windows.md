@@ -13,7 +13,7 @@ installed. Please submit a PR to update this document for alternate versions of 
    If Python is installed and you have a version of Python3+, you may skip the following steps and move on to the next section.
 1. Download the Python 3.5.4 web-based installer from [here](https://www.python.org/downloads/release/python-354/)
 2. Execute installer and make sure to select "Add Python 3.5 to PATH"
-  1. If you have accidentally omitted to add Python to your PATH:
+  2.1. If you have accidentally omitted to add Python to your PATH:
     1. Start menu
     2. Control Panel
     3. User Accounts
