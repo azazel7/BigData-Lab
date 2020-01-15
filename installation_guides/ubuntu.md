@@ -16,7 +16,7 @@ Conda is an open-source package management system and environment management sys
 ```
 2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
 3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER, then if you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
-4. Reinitialize your shell by executing the command `source ~/.bashrc`.
+4. Open a new terminal or reinitialize your shell with the command `source ~/.bashrc`.
 5. To prevent conda from activating the default environment whenever you open a shell, use the following command: `conda config --set auto_activate_base false`.
 6. Execute the command `conda update -y -n base -c defaults conda` to update conda to its latest version.
 7. Congrats! You have successfully installed conda.
@@ -35,10 +35,9 @@ PySpark is the Python API in Apache Spark. It is required to complete the course
 In this section, we will install Apache Spark into the virtual environment that we
 have just created.
 
-1. With your venv activated, we will execute the command `conda install -y pyspark`.
-   You have just installed PySpark, however, Apache Spark needs the Java Platform to run.
-2. You can check if java is installed on your system with the command `java -version`.
-   If it is not installed, you can install it by executing the command `sudo apt install -y openjdk-8-jre`.
+1. With your venv activated, we will execute the command `conda install -y pyspark openjdk`.
+   Apache Spark use the language Scala which requires the Java Platform to run, OpenJDK is a free
+   and open-source implementation of the Java Platform
 3. Execute the command `pyspark` to start the PySpark interpreter.
 4. Run the following commands:
 
@@ -72,4 +71,4 @@ We will be using Pytest to evaluate your assignment solutions.
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is always activated to
 access the installed resources, otherwise, you will find that they are missing.
 
-If you would like to exit your virtual environment, entering the command `conda deactivate` into your Command Prompt will do it.
+If you would like to exit your virtual environment, entering the command `conda deactivate` will do it.
