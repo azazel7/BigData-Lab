@@ -294,7 +294,7 @@ def incremente(x):
     return x + 1
 
 def test_answer():
-	assert inc(3) == 5
+	assert incremente(3) == 4
 ```
 
 To run the tests, just run one of the following commands:
