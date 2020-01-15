@@ -1,4 +1,4 @@
-## Set up guide for Ubuntu
+## Set up guide
 
 This document is intended to provide you with the details for how to install and
 configure conda, python, pip, pytest, pyspark and dask.
@@ -8,6 +8,9 @@ Note: these instructions were tested on Ubuntu 18.04.3.
 ### Installing Conda
 
 Conda is an open-source package management system and environment management system that runs on Windows, macOS, and Linux. We will use Conda to create a virtual environment with python3.5, PySpark, Dask and PyTest.
+
+<details>
+<summary>Linux</summary>
 
 1. Download Miniconda for Linux by executing the following command:
 
@@ -20,6 +23,34 @@ Conda is an open-source package management system and environment management sys
 5. To prevent conda from activating the default environment whenever you open a shell, use the following command: `conda config --set auto_activate_base false`.
 6. Execute the command `conda update -y -n base -c defaults conda` to update conda to its latest version.
 7. Congrats! You have successfully installed conda.
+
+</details>
+
+<details>
+<summary>macOS</summary>
+
+1. Download Miniconda for Linux by executing the following command:
+
+```
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-$(uname -i).sh
+```
+2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
+3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
+4. Open a new terminal.
+5. To prevent conda from activating the default environment whenever you open a shell, use the following command: `conda config --set auto_activate_base false`.
+6. Execute the command `conda update -y -n base -c defaults conda` to update conda to its latest version.
+7. Congrats! You have successfully installed conda.
+
+</details>
+
+<details>
+<summary>Windows</summary>
+
+1. Download Miniconda (Python 3.7 version) from this webpage: `https://docs.conda.io/en/latest/miniconda.html`
+2. Execute the installer and follow instructions
+3. Congrats! You have successfully installed conda. You will find the Anaconda Prompt in the start menu.
+
+</details>
 
 ### Creating a virtual environment
 
