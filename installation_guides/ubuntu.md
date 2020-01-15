@@ -15,7 +15,7 @@ Conda is an open-source package management system and environment management sys
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(uname -i).sh
 ```
 2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
-3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER, then if you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
+3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
 4. Open a new terminal or reinitialize your shell with the command `source ~/.bashrc`.
 5. To prevent conda from activating the default environment whenever you open a shell, use the following command: `conda config --set auto_activate_base false`.
 6. Execute the command `conda update -y -n base -c defaults conda` to update conda to its latest version.
@@ -25,7 +25,7 @@ Conda is an open-source package management system and environment management sys
 
 Conda can be used to create environments. A conda environment is a directory that contains a specific collection of conda packages. They make it possible to have different versions of python and python packages installed on the same system in different environments.
 
-1. Create a virtual environment with python 3.5 by executing the command: `conda create -n bigdata-lab python=3.5 -y`
+1. Create a virtual environment with python 3.5 by executing the command: `conda create -y -n bigdata-lab python=3.5 -y`
 2. Activate your virtualenv by executing the command: `conda activate bigdata-lab`
 
 
