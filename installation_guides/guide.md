@@ -17,6 +17,7 @@ Conda is an open-source package management system and environment management sys
 ```
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(uname -i).sh
 ```
+Note: Use `curl -O` if `wget` is not installed on your system.
 2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
 3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
 4. Open a new terminal or reinitialize your shell with the command `source ~/.bashrc`.
@@ -32,10 +33,11 @@ Conda is an open-source package management system and environment management sys
 1. Download Miniconda for Linux by executing the following command:
 
 ```
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-$(uname -i).sh
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-$(uname -m).sh
 ```
-2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
-3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
+Note: Use `curl -O` if `wget` is not installed on your system.
+2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-MacOSX-$(uname -m).sh`.
+3. Execute the installer by executing the command `./Miniconda3-latest-MacOSX-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
 4. Open a new terminal.
 5. To prevent conda from activating the default environment whenever you open a shell, use the following command: `conda config --set auto_activate_base false`.
 6. Execute the command `conda update -y -n base -c defaults conda` to update conda to its latest version.
@@ -48,7 +50,11 @@ Conda is an open-source package management system and environment management sys
 
 1. Download Miniconda (Python 3.7 version) from this webpage: `https://docs.conda.io/en/latest/miniconda.html`
 2. Execute the installer and follow instructions
-3. Congrats! You have successfully installed conda. You will find the Anaconda Prompt in the start menu.
+![Anaconda Installer](alternatives/figures/anaconda-installer.JPG)
+3. Access your Start Menu and search for the Anaconda Command Prompt
+![Anaconda Command Prompt](alternatives/figures/anaconda-prompt.png)
+4. Execute the command `conda update -y -n base -c defaults conda` inside the Anaconda Command Prompt to update conda to its latest version.
+5. Congrats! You have successfully installed conda. You will find the Anaconda Prompt in the start menu.
 
 </details>
 
@@ -77,7 +83,7 @@ data = [i for i in range(10)]
 rdd = spark.sparkContext.parallelize(data)
 rdd.filter(lambda x: x%2 == 0).collect()
 ```
-5. The output of the last command should be *[0, 2, 4, 6, 8]*. Use exit() or Ctrl-D to exit the interpreter.
+5. The output of the last command should be *[0, 2, 4, 6, 8]*. Use exit() (all systems) or Ctrl-D (Linux and MacOS only) to exit the interpreter.
 6. Congrats! You have successfully installed PySpark.
 
 
