@@ -13,11 +13,11 @@ Conda is an open-source package management system and environment management sys
 <summary>Linux</summary>
 
 1. Download Miniconda for Linux by executing the following command:
+   Note: Use `curl -O` if `wget` is not installed on your system.
 
 ```
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(uname -i).sh
 ```
-Note: Use `curl -O` if `wget` is not installed on your system.
 2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-Linux-$(uname -i).sh`.
 3. Execute the installer by executing the command `./Miniconda3-latest-Linux-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
 4. Open a new terminal or reinitialize your shell with the command `source ~/.bashrc`.
@@ -31,11 +31,11 @@ Note: Use `curl -O` if `wget` is not installed on your system.
 <summary>macOS</summary>
 
 1. Download Miniconda for Linux by executing the following command:
+   Note: Use `curl -O` if `wget` is not installed on your system.
 
 ```
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-$(uname -m).sh
 ```
-Note: Use `curl -O` if `wget` is not installed on your system.
 2. Grant execution rights to the installer with the command `chmod +x Miniconda3-latest-MacOSX-$(uname -m).sh`.
 3. Execute the installer by executing the command `./Miniconda3-latest-MacOSX-$(uname -i).sh`. Press ENTER and scroll through the license agreement by pressing SPACE. If you accept the license agreement type `yes` and press ENTER. Enter the path where you want to install anaconda on your computer (for example `~/.condainstallation`). Finally, type `yes` to let the installer initialize conda.
 4. Open a new terminal.
