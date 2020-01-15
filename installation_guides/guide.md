@@ -51,10 +51,10 @@ Note: Use `curl -O` if `wget` is not installed on your system.
 1. Download Miniconda (Python 3.7 version) from this webpage: `https://docs.conda.io/en/latest/miniconda.html`
 2. Execute the installer and follow instructions
 ![Anaconda Installer](alternatives/figures/anaconda-installer.JPG)
-3. Access your Start Menu and search for the Anaconda Command Prompt
+3. Access your Start Menu and search for the Anaconda Prompt
 ![Anaconda Command Prompt](alternatives/figures/anaconda-prompt.png)
-4. Execute the command `conda update -y -n base -c defaults conda` inside the Anaconda Command Prompt to update conda to its latest version.
-5. Congrats! You have successfully installed conda. You will find the Anaconda Prompt in the start menu.
+4. Execute the command `conda update -y -n base -c defaults conda` inside the Anaconda Prompt to update conda to its latest version.
+5. Congrats! You have successfully installed conda.
 
 </details>
 
