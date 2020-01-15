@@ -95,9 +95,15 @@ entirely Python-based and does not require a JVM to execute its Python pipelines
 Pytest is a Python framework that allows you to write test cases for Python applications.
 We will be using Pytest to evaluate your assignment solutions.
 
-1. With your venv activated, well will execute the command `conda install -y pytest` in the Command Prompt.
+1. With your venv activated, we will execute the command `conda install -y pytest` in the Command Prompt.
 2. Execute the command `pytest --version` to ensure pytest has successfully been installed.
 
+### Installing Git inside your virtual environment
+
+Git is a version-control system for tracking changes in source code during development.
+
+1. With your venv activated, we will execute the command `conda install -y git` in the Command Prompt.
+2. Execute the command `git version` to ensure git has successfully been installed.
 
 Congrats! Your system is now configured for the course. Make sure that your virtual environment is always activated to
 access the installed resources, otherwise, you will find that they are missing.
