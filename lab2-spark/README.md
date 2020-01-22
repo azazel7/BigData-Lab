@@ -42,7 +42,7 @@ rdd.flatMap(lambda x: [x*x, x*x*x] if x % 2 == 1 else [])
 rdd.filter(lambda x: x % 3 == 1)
 #Output [1, 4, 7]
 ```
-- **reduceByKey**(func) : 	When called on a dataset of (K, V) pairs, returns a dataset of (K, V) pairs where the values for each key are aggregated using the given reduce function func, which must be of type (V,V) => V. Like in groupByKey, the number of reduce tasks is configurable through an optional second argument.
+- **reduceByKey**(func) : 	When called on a dataset of (K, V) pairs, returns a dataset of (K, V) pairs where the values for each key are aggregated using the given reduce function func, which must be of type (V,V) => V.
 ```python
 data = [(i%3, i) for i in range(10)]
 rdd = spark.sparkContext.parallelize(data)
