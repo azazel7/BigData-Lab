@@ -1,8 +1,19 @@
 # Spark Introduction
+## Cheat Sheets
+- [Pyspark API](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf)
+- [Dataframe API](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_SQL_Cheat_Sheet_Python.pdf)
+
+## Starting Pyspark
+After loading your virtual environment, run the following command:
+```bash
+pyspark
+```
 
 ## RDDs
-RDDs can be seen as lists of elements that will be manipulated by applying functions over each element.
-A more complete documentation is available [here](http://spark.apache.org/docs/latest/rdd-programming-guide.html).
+Resilient Distributed Datasets (RDDs) can be seen as lists of elements that
+will be manipulated by applying functions over each element.  A more complete
+documentation is available
+[here](http://spark.apache.org/docs/latest/rdd-programming-guide.html).
 
 ```python
 filename = "trees2016.csv"
