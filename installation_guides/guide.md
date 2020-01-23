@@ -145,3 +145,35 @@ otherwise, you will find that they are missing.
 
 If you would like to exit your virtual environment, entering the command `conda deactivate`
 will do it.
+
+### Installing PyCharm
+
+PyCharm is an Integrated Development Environment (IDE) that may facilitate your development in Python.
+
+1. Install the virtual environment using Conda as explain before.
+2. Clone your assignment repository.
+3. Install PyCharm
+4. Open PyCharm then open you project.
+
+![Select your path](figures/pycharm_01_open_directory.png)
+
+5. Change the environment for the project.
+	1. File > Settings > Pick your project.
+	![Select your project](figures/pycharm_02_select_project_change_interpreter.png)
+
+	2. Add a new interpreter.
+	![Select your project](figures/pycharm_03_add_interpreter_add_button.png)
+
+	3. Conda Environment > Existing Environment > Select the environment you have created in Conda.
+	![Select your project](figures/pycharm_04_select_conda_environment.png)
+
+6. Mark the root directory of the project as the root.
+![Select your project](figures/pycharm_05_mark_as_root.png)
+
+7. Edit configuration of the tests so the working directory when pytest is run is the root.
+![Select your project](figures/pycharm_06_click_edit_run.png)
+
+![Select your project](figures/pycharm_07_edit_working_dir.png)
+
+8. Run pytest.
+![Select your project](figures/pycharm_08_run_pytest.png)
