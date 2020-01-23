@@ -151,8 +151,12 @@ will do it.
 PyCharm is an Integrated Development Environment (IDE) that may facilitate your development in Python.
 
 1. Install the virtual environment using Conda as explain before.
-2. Clone your assignment repository.
+2. Clone your assignment repository using `git clone`.
 3. Install PyCharm
+	- Archlinux: `sudo pacman -S pycharm-community-edition`
+	- Windows: Download from [here](https://www.jetbrains.com/pycharm/download/#section=windows) then run the installer.
+	- Linux: Download from [here](https://www.jetbrains.com/pycharm/download/#section=linux) then run the installer.
+	- MacOSX: Download from [here](https://www.jetbrains.com/pycharm/download/#section=mac) then run the installer.
 4. Open PyCharm then open you project.
 
 ![Select your path](figures/pycharm_01_open_directory.png)
