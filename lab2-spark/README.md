@@ -23,8 +23,12 @@ rdd = spark.sparkContext.parallelize(data)
 ```
 `lines` can be seen as a list of independant strings and `rdd` as a list of integer ranging from 0 to 9.
 
+### Action Methods
 - **collect**() : This function will collect the RDD into a python list.
 - **take**(k) : This function create an RDD from `k` element within the RDD.
+- **count**() : This function returns the number of element within the RDD.
+
+### Transformation Methods
 - **map**(func) : Return a new distributed dataset formed by passing each element of the source through a function func.
 ```python
 lines = lines.map(lambda l: l.split(','))
@@ -142,7 +146,7 @@ trees_df = spark.createDataFrame(trees_rdd)
 df = df1.join(df2, df2.park_name == df1.park_name)
 ```
 
-## Assignment 
+## Assignment 1
 ### What to do
 The goal of the assignment is to code the empty functions in `answers/answer.py`.
 
@@ -164,6 +168,8 @@ Ali,26,"23 St-Catherine street, Québec"
 ### Dataset
 The dataset for assignment 1 is a CSV file that contains one injection per line.
 A tree is treated once a year.
+
+Since the header and its documentation are in French, here is a quick translation of what each column means:
 
 - **Nom_arrond** :  Neighborhood name.
 - **Invent** : Type of tree injected (H = out of street, R = in street)
