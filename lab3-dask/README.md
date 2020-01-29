@@ -31,6 +31,9 @@ Because `z` is still a delayed object, the `compute()` function needs to be call
 ```python
 z.compute()
 ```
+```
+5
+```
 
 The `visualize` function can be used to visualize the graph
 
@@ -44,6 +47,13 @@ All Dask objects have a `dask` attribute that stores the calculations necessary 
 
 ```python
 dict(z.dask)
+```
+```
+{'inc-badf625d-fc77-49c3-a3a8-520ebc7ce0d2': (<function __main__.inc(x)>, 1),
+ 'inc-cbe2d881-46da-49e4-8e12-9e2a756f4133': (<function __main__.inc(x)>, 2),
+ 'add-2d84e90c54d3a13bd4fff48a7cc67afd': (<function _operator.add(a, b, /)>,
+                                          'inc-badf625d-fc77-49c3-a3a8-520ebc7ce0d2',
+                                          'inc-cbe2d881-46da-49e4-8e12-9e2a756f4133')}
 ```
 
 ### Important notes
@@ -70,6 +80,9 @@ import dask.bag as db
 b = db.from_sequence([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], npartitions=2)
 b.take(3)
 ```
+```
+(1, 2, 3)
+```
 
 ### Manipulation
 Bag objects hold the standard functional API found in projects like the Python standard library, toolz, or pyspark, including `map`, `filter`, `groupby`, etc..
@@ -84,9 +97,15 @@ b = db.from_sequence([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 c = b.filter(is_even).map(lambda x: x ** 2)
 c
 ```
+```
+dask.bag<map-lam..., npartitions=10>
+```
 
 ```python
 c.compute()
+```
+```
+[4, 16, 36, 64, 100]
 ```
 
 ### Groupby and Foldby
@@ -107,11 +126,18 @@ Groupby collects items in your collection so that all items with the same value 
 b = db.from_sequence(['Alice', 'Bob', 'Charlie', 'Dan', 'Edith', 'Frank'])
 b.groupby(len).compute()  # names grouped by length
 ```
+```
+[(7, ['Charlie']), (3, ['Bob', 'Dan']), (5, ['Edith', 'Alice', 'Frank'])]
+```
 
 ```python
 b = db.from_sequence(list(range(10)))
 is_even = lambda x: x % 2
 b.groupby(is_even).starmap(lambda k, v: (k, max(v))).compute()
+```
+```
+[(0, 8), (1, 9)]
+[(0, 8), (1, 9)]
 ```
 #### Foldby
 When using foldby you provide:
@@ -124,6 +150,9 @@ Your reduction must be associative. It will happen in parallel in each of the pa
 
 ```python
 b.foldby(is_even, binop=max, combine=max).compute()
+```
+```
+[(0, 8), (1, 9)]
 ```
 
 #### Limitations
@@ -155,7 +184,15 @@ Now that we have an Array we perform standard numpy-style computations like arit
 ```python
 result = y.sum()
 result.compute()
+```
+```
+49993551.54938029
+```
+```python
 y[0:4].compute()
+```
+```
+array([0.54890611, 0.84501265, 0.0433674 , 0.4306912 ])
 ```
 ### Limitations
 Dask.array does not implement the entire numpy interface. Users expecting this will be disappointed. Notably dask.array has the following failings:
@@ -185,6 +222,9 @@ df.head()
 # len is applied to each individual pandas dataframe
 # and then the subtotals are combined by Dask
 len(df)
+```
+```
+21914
 ```
 ```python
 df.latitude.max().visualize()
