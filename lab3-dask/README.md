@@ -113,4 +113,89 @@ b = db.from_sequence(list(range(10)))
 is_even = lambda x: x % 2
 b.groupby(is_even).starmap(lambda k, v: (k, max(v))).compute()
 ```
+#### Foldby
+When using foldby you provide:
 
+- A key function on which to group elements
+- A binary operator such as you would pass to reduce that you use to perform reduction per each group
+- A combine binary operator that can combine the results of two reduce calls on different parts of your dataset.
+
+Your reduction must be associative. It will happen in parallel in each of the partitions of your dataset. Then all of these intermediate results will be combined by the combine binary operator.
+
+```python
+b.foldby(is_even, binop=max, combine=max).compute()
+```
+
+#### Limitations
+Bags provide very general computation (any Python function.) This generality comes at cost. Bags have the following known limitations
+
+- Bag operations tend to be slower than array/dataframe computations in the same way that Python tends to be slower than NumPy/Pandas
+- Bag.groupby is slow. You should try to use Bag.foldby if possible. Using Bag.foldby requires more thought. Even better, consider creating a normalised dataframe.
+
+## Dask Arrays
+Dask array provides a parallel, larger-than-memory, n-dimensional array using blocked algorithms. Simply put: distributed Numpy.
+
+### Create dask.array object
+You can create a dask.array Array object with the da.from_array function. This function accepts
+
+- data: Any object that supports NumPy slicing
+- chunks: A chunk size to tell us how to block up our array, like (1000000,)
+
+
+```python
+import dask.array as da
+x = np.random.rand(100000000) # create random numpy array
+y = da.from_array(x, chunks=(1000000,))
+```
+
+### Manipulate dask.array objct as you would a numpy array
+Now that we have an Array we perform standard numpy-style computations like arithmetic, mathematics, slicing, reductions, etc..
+
+
+```python
+result = y.sum()
+result.compute()
+y[0:4].compute()
+```
+### Limitations
+Dask.array does not implement the entire numpy interface. Users expecting this will be disappointed. Notably dask.array has the following failings:
+
+- Dask does not implement all of np.linalg. This has been done by a number of excellent BLAS/LAPACK implementations and is the focus of numerous ongoing academic research projects.
+- Dask.array does not support any operation where the resulting shape depends on the values of the array. In order to form the Dask graph we must be able to infer the shape of the array before actually executing the operation. This precludes operations like indexing one Dask array with another or operations like np.where.
+- Dask.array does not attempt operations like sort which are notoriously difficult to do in parallel and are of somewhat diminished value on very large data (you rarely actually need a full sort). Often we include parallel-friendly alternatives like `topk`.
+- Dask development is driven by immediate need, and so many lesser used functions, like `np.full_like` have not been implemented purely out of laziness. These would make excellent community contributions.
+
+## Dask Dataframes
+The dask.dataframe module implements a blocked parallel DataFrame object that mimics a large subset of the Pandas DataFrame. One Dask DataFrame is comprised of many in-memory pandas DataFrames separated along the index. One operation on a Dask DataFrame triggers many pandas operations on the constituent pandas DataFrames in a way that is mindful of potential parallelism and memory constraints.
+
+
+```python
+import dask.dataframe as dd
+
+# Note: datatypes are inferred by reading the first couple of lines
+# and may be incorrect and therefore need to be supplied
+df = dd.read_csv('frenepublicinjection2015.csv',
+dtype={"No_Civiq": str, "Nom_parc": str})
+# load and count number of rows
+df.head()
+```
+![](figures/head.png)
+
+```python
+# len is applied to each individual pandas dataframe
+# and then the subtotals are combined by Dask
+len(df)
+```
+```python
+df.latitude.max().visualize()
+```
+![](figures/visualize_df.png)
+
+
+### Limitations
+Dask.dataframe only covers a small but well-used portion of the Pandas API. This limitation is for two reasons:
+
+- The Pandas API is huge
+- Some operations are genuinely hard to do in parallel (e.g. sort)
+
+Additionally, some important operations like `set_index` work, but are slower than in Pandas because they include substantial shuffling of data, and may write out to disk.
