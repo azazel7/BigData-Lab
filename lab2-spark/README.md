@@ -138,7 +138,9 @@ df.limit(7)
 - **createDataFrame**(rdd) : Create a dataframe from an RDD.
 ```python
 from pyspark.sql import Row
-trees_rdd = parts.map(lambda p: Row(id=int(p[1]), park_name=p[1], x=p[2], y=p[3]))
+parts = spark.sparkContext.textFile("frenepublicinjection2015.csv")
+parts = parts.map(lambda x: x.split(","))
+trees_rdd = parts.map(lambda p: Row(id=p[0], park_name=p[1], x=p[2], y=p[3]))
 trees_df = spark.createDataFrame(trees_rdd)
 ```
 - **join**() : Combine dataframe based on common column.
