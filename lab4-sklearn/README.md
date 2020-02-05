@@ -57,6 +57,14 @@ accuracy = accuracy_score(y_test, predicted)
 print(f'Mean accuracy score: {accuracy:.3}')
 ```
 
+Using the KFold split instead:
+```python
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=3)
+for train, test in kf.split(X):
+	print("%s %s" % (train, test))
+```
+
 ## Second classification
 Dowload the dataset [here](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip) then extract it.
 
