@@ -148,6 +148,11 @@ trees_df = spark.createDataFrame(trees_rdd)
 df = df1.join(df2, df2.park_name == df1.park_name)
 ```
 
+- **toDF**(name1, name2, name3) : Rename the columns of the data frame.
+```python
+df = df1.toDF("Otter", "Platypus", "Parrot", "Whale")
+```
+
 ## Assignment 1
 ### What to do
 The goal of the assignment is to code the empty functions in `answers/answer.py`.
