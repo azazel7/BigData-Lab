@@ -82,8 +82,8 @@ Conda can be used to create environments. A conda environment is a directory tha
 specific collection of conda packages. They make it possible to have different versions of python
 and python packages installed on the same system in different environments.
 
-1. Create a virtual environment with python 3.5 by executing the command: 
-   `conda create -y -n bigdata-lab python=3.5 -y`
+1. Create a virtual environment with python 3.6 by executing the command: 
+   `conda create -y -n bigdata-lab python=3.6 -y`
 2. Activate your virtualenv by executing the command: `conda activate bigdata-lab`
 
 
@@ -97,8 +97,10 @@ have just created.
    Apache Spark uses the language Scala which requires the Java Platform to run. If java is not
    already installed on your system, you can easily install it using conda.
    To check whether java is installed use `java -version`, and to install the java platform if
-   necessary you can use the command: `conda install -y openjdk`.
+   necessary you can use the command: `conda install -y <URL to java file>`.
    OpenJDK is a free and open-source implementation of the Java Platform
+   **NOTE: For PySpark to run successfully, JDK8 is required. Please select the OpenJDK8 file that corresponds to
+   your OS from here https://anaconda.org/anaconda/openjdk/files**
 3. Execute the command `pyspark` to start the PySpark interpreter.
 4. Run the following commands:
 
