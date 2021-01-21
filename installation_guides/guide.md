@@ -93,7 +93,7 @@ PySpark is the Python API in Apache Spark. It is required to complete the course
 In this section, we will install Apache Spark into the virtual environment that we
 have just created.
 
-1. With your venv activated, we will execute the command `conda install -y pyspark`.
+1. With your venv activated, we will execute the command `conda install -y pyspark=3.0.0`.
    Apache Spark uses the language Scala which requires the Java Platform to run. If java is not
    already installed on your system, you can easily install it using conda.
    To check whether java is installed use `java -version`, and to install the java platform if
