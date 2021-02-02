@@ -73,7 +73,6 @@ PySpark, Dask and PyTest.
 4. Execute the command `conda update -y -n base -c defaults conda` inside the Anaconda Prompt to
    update conda to its latest version.
 5. Congrats! You have successfully installed conda.
-
 </details>
 
 ### Creating a virtual environment
@@ -113,6 +112,24 @@ rdd.filter(lambda x: x%2 == 0).collect()
    Use exit() (all systems) or Ctrl-D (Linux and MacOS only) to exit the interpreter.
 6. Congrats! You have successfully installed PySpark.
 
+<details>
+<summary>Windows</summary>
+1. You have just installed PySpark, however, you may observe bugs if you try to access the PySpark interpreter.
+![PySpark winutils bugs](figures/windows/pyspark-bugs.JPG)
+2. Download winutils.exe from [here](http://public-repo-1.hortonworks.com/hdp-win-alpha/winutils.exe)
+3. Create a winutils folder to copy the executable to it (e.g. `C:\Users\umroot\AppData\Local\Programs\Hadoop\bin\winutils.exe`)
+4. Create a new environment variable and name it `HADOOP_HOME`. Set the variable value to the path of the `Hadoop` directory.
+Note: If you don't know how to set environment variables, see these steps.
+![Setting Hadoop Home](figures/windows/setting-hadoop-home.JPG)
+    - Start menu
+    - Control Panel
+    - User Accounts
+    - Change my environment variables (last option on the lefthand-side menu or search "Edit environment variables")
+    - Click on `New...` under `User variables for <your username>`
+    ![Environment variables window](figures/windows/environmentvars.JPG)
+    - Set variable name to `HADOOP_HOME` and variable value to the path of the `Hadoop` directory. 
+    - Press OK on both screens to finalize the changes.
+</details>
 
 ### Installing Dask inside your virtual environment
 
