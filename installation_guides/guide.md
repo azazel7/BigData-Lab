@@ -114,6 +114,7 @@ rdd.filter(lambda x: x%2 == 0).collect()
 
 <details>
 <summary>Windows</summary>
+
 1. You have just installed PySpark, however, you may observe bugs if you try to access the PySpark interpreter.
 ![PySpark winutils bugs](figures/windows/pyspark-bugs.JPG)
 2. Download winutils.exe from [here](http://public-repo-1.hortonworks.com/hdp-win-alpha/winutils.exe)
@@ -121,6 +122,7 @@ rdd.filter(lambda x: x%2 == 0).collect()
 4. Create a new environment variable and name it `HADOOP_HOME`. Set the variable value to the path of the `Hadoop` directory.
 Note: If you don't know how to set environment variables, see these steps.
 ![Setting Hadoop Home](figures/windows/setting-hadoop-home.JPG)
+
     - Start menu
     - Control Panel
     - User Accounts
