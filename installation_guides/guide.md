@@ -122,7 +122,22 @@ entirely Python-based and does not require a JVM to execute its Python pipelines
 1. With your venv activated, we will execute the command `conda install -y dask` in the Command
    Prompt.
 2. If no errors have occurred during the process, Dask has been successfully installed.
+3. To double check if it is working well, run the following command:
 
+```python
+from dask import delayed
+def inc(x):
+    return x + 1
+
+@delayed
+def add(x, y):
+	return x + y
+x = delayed(inc)(1)
+y = delayed(inc)(2)
+z = add(x,y)
+z.compute()
+```
+4. The output of `z.compute()` should be 5.
 
 ### Installing Pytest inside your virtual environment
 
