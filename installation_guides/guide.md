@@ -8,7 +8,7 @@ Note: these instructions were tested on Ubuntu 18.04.3.
 ### Installing Conda
 
 Conda is an open-source package management system and environment management system that runs on
-Windows, macOS, and Linux. We will use Conda to create a virtual environment with python3.5,
+Windows, macOS, and Linux. We will use Conda to create a virtual environment with python3.8,
 PySpark, Dask and PyTest.
 
 <details>
@@ -81,8 +81,8 @@ Conda can be used to create environments. A conda environment is a directory tha
 specific collection of conda packages. They make it possible to have different versions of python
 and python packages installed on the same system in different environments.
 
-1. Create a virtual environment with python 3.6 by executing the command: 
-   `conda create -y -n bigdata-lab python=3.6 -y`
+1. Create a virtual environment with python 3.8 by executing the command: 
+   `conda create -y -n bigdata-lab python=3.8 -y`
 2. Activate your virtualenv by executing the command: `conda activate bigdata-lab`
 
 
