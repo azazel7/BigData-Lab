@@ -59,7 +59,7 @@ have just created.
 ![Installing PySpark](figures/windows/installing-pyspark.JPG)
 - You have just installed PySpark, however, there will still be bugs if you try to access the PySpark interpreter.
 ![PySpark winutils bugs](figures/windows/pyspark-bugs.JPG)
-2. Download winutils.exe from [here](http://public-repo-1.hortonworks.com/hdp-win-alpha/winutils.exe)
+2. Download winutils.exe from [here](https://github.com/azazel7/BigData-Lab/raw/master/installation_guides/winutils.exe)
 3. Create a winutils folder to copy the executable to it (e.g. `C:\Users\umroot\AppData\Local\Programs\Hadoop\bin\winutils.exe`)
 4. Create a new environment variable and name it `HADOOP_HOME`. Set the variable value to the path of the `Hadoop` directory.
 Note: If you don't know how to set environment variables, see step 2.1 of installing Python.
